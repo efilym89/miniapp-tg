@@ -1,4 +1,4 @@
-const menuItems = [
+﻿const menuItems = [
   {
     id: "set-classic",
     name: "Сет Классик",
@@ -74,6 +74,21 @@ const categoryList = document.getElementById("category-list");
 
 const menuTemplate = document.getElementById("menu-item-template");
 const cartTemplate = document.getElementById("cart-item-template");
+const cartPageTemplate = document.getElementById("cart-page-item-template");
+const cartFab = document.getElementById("cart-fab");
+const cartBadge = document.getElementById("cart-badge");
+const cartPage = document.getElementById("cart-page");
+const cartPageBackdrop = document.getElementById("cart-page-backdrop");
+const cartPageClose = document.getElementById("cart-page-close");
+const cartPageList = document.getElementById("cart-page-list");
+const cartPageTotal = document.getElementById("cart-page-total");
+const cartPageCheckout = document.getElementById("cart-page-checkout");
+const checkoutPage = document.getElementById("checkout-page");
+const checkoutPageBackdrop = document.getElementById("checkout-page-backdrop");
+const checkoutPageClose = document.getElementById("checkout-page-close");
+const checkoutPageList = document.getElementById("checkout-page-list");
+const checkoutPageTotal = document.getElementById("checkout-page-total");
+const checkoutPageSubmit = document.getElementById("checkout-page-submit");
 
 const formatPrice = (value) => `${value} ₽`;
 
@@ -114,9 +129,7 @@ const renderCategories = () => {
 };
 
 const matchesSearch = (item) => {
-  if (!searchQuery) {
-    return true;
-  }
+  if (!searchQuery) return true;
   const query = searchQuery.toLowerCase();
   const haystack = [item.name, item.description, item.ingredients.join(" ")].join(" ").toLowerCase();
   return haystack.includes(query);
@@ -133,11 +146,7 @@ const updateMenuCardState = (card, id) => {
   const addButton = card.querySelector(".add");
   const control = card.querySelector(".quantity-control");
   const countNode = card.querySelector(".quantity-count");
-
-  if (!addButton || !control || !countNode) {
-    return;
-  }
-
+  if (!addButton || !control || !countNode) return;
   if (count > 0) {
     addButton.hidden = true;
     control.hidden = false;
@@ -151,16 +160,12 @@ const updateMenuCardState = (card, id) => {
 
 const updateMenuCardById = (id) => {
   const card = document.querySelector(`[data-item-id="${id}"]`);
-  if (card) {
-    updateMenuCardState(card, id);
-  }
+  if (card) updateMenuCardState(card, id);
 };
 
 const renderMenu = () => {
   menuNode.innerHTML = "";
-
   const items = filteredMenuItems();
-
   if (items.length === 0) {
     const empty = document.createElement("div");
     empty.className = "cart__empty";
@@ -168,7 +173,6 @@ const renderMenu = () => {
     menuNode.appendChild(empty);
     return;
   }
-
   items.forEach((item) => {
     const card = menuTemplate.content.cloneNode(true);
     const article = card.querySelector(".menu-card");
@@ -206,7 +210,7 @@ const renderMenu = () => {
 const addToCart = (id) => {
   const currentCount = cart.get(id) ?? 0;
   cart.set(id, currentCount + 1);
-  renderCart();
+  renderCartViews();
   updateMenuCardById(id);
   pulseCard(id);
 };
@@ -214,23 +218,18 @@ const addToCart = (id) => {
 const updateCount = (id, delta) => {
   const currentCount = cart.get(id) ?? 0;
   const nextCount = currentCount + delta;
-
   if (nextCount <= 0) {
     cart.delete(id);
   } else {
     cart.set(id, nextCount);
   }
-
-  renderCart();
+  renderCartViews();
   updateMenuCardById(id);
-  if (delta !== 0) {
-    pulseCard(id);
-  }
+  if (delta !== 0) pulseCard(id);
 };
 
-const renderCart = () => {
+const renderCartMain = () => {
   cartNode.innerHTML = "";
-
   if (cart.size === 0) {
     const empty = document.createElement("div");
     empty.className = "cart__empty";
@@ -239,36 +238,158 @@ const renderCart = () => {
   } else {
     Array.from(cart.entries()).forEach(([id, count]) => {
       const item = menuItems.find((menuItem) => menuItem.id === id);
-      if (!item) {
-        return;
-      }
-
+      if (!item) return;
       const row = cartTemplate.content.cloneNode(true);
       row.querySelector(".name").textContent = item.name;
       row.querySelector(".details").textContent = `${formatPrice(item.price)} · ${count} шт`;
       row.querySelector(".count").textContent = count;
       row.querySelector(".decrease").addEventListener("click", () => updateCount(id, -1));
       row.querySelector(".increase").addEventListener("click", () => updateCount(id, 1));
-
       cartNode.appendChild(row);
     });
   }
+};
 
+const renderCartPage = () => {
+  cartPageList.innerHTML = "";
+  if (cart.size === 0) {
+    const empty = document.createElement("div");
+    empty.className = "cart__empty";
+    empty.textContent = "Корзина пока пуста.";
+    cartPageList.appendChild(empty);
+    cartPageTotal.textContent = formatPrice(0);
+    return;
+  }
+  Array.from(cart.entries()).forEach(([id, count]) => {
+    const item = menuItems.find((menuItem) => menuItem.id === id);
+    if (!item) return;
+    const row = cartPageTemplate.content.cloneNode(true);
+    row.querySelector(".name").textContent = item.name;
+    row.querySelector(".details").textContent = `${formatPrice(item.price)} · ${count} шт`;
+    row.querySelector(".count").textContent = count;
+    const thumb = row.querySelector(".cart-page__thumb");
+    if (item.image) {
+      thumb.src = item.image;
+      thumb.alt = item.name;
+    }
+    row.querySelector(".decrease").addEventListener("click", () => updateCount(id, -1));
+    row.querySelector(".increase").addEventListener("click", () => updateCount(id, 1));
+    cartPageList.appendChild(row);
+  });
   const total = Array.from(cart.entries()).reduce((sum, [id, count]) => {
     const item = menuItems.find((menuItem) => menuItem.id === id);
     return sum + (item ? item.price * count : 0);
   }, 0);
-
-  cartTotalNode.textContent = formatPrice(total);
+  cartPageTotal.textContent = formatPrice(total);
 };
+
+const renderCheckoutPage = () => {
+  checkoutPageList.innerHTML = "";
+  if (cart.size === 0) {
+    const empty = document.createElement("div");
+    empty.className = "cart__empty";
+    empty.textContent = "Корзина пока пуста.";
+    checkoutPageList.appendChild(empty);
+    checkoutPageTotal.textContent = formatPrice(0);
+    return;
+  }
+  Array.from(cart.entries()).forEach(([id, count]) => {
+    const item = menuItems.find((menuItem) => menuItem.id === id);
+    if (!item) return;
+    const row = cartPageTemplate.content.cloneNode(true);
+    row.querySelector(".name").textContent = item.name;
+    row.querySelector(".details").textContent = `${formatPrice(item.price)} · ${count} шт`;
+    row.querySelector(".count").textContent = count;
+    const thumb = row.querySelector(".cart-page__thumb");
+    if (item.image) {
+      thumb.src = item.image;
+      thumb.alt = item.name;
+    }
+    row.querySelector(".decrease").addEventListener("click", () => updateCount(id, -1));
+    row.querySelector(".increase").addEventListener("click", () => updateCount(id, 1));
+    checkoutPageList.appendChild(row);
+  });
+  const total = Array.from(cart.entries()).reduce((sum, [id, count]) => {
+    const item = menuItems.find((menuItem) => menuItem.id === id);
+    return sum + (item ? item.price * count : 0);
+  }, 0);
+  checkoutPageTotal.textContent = formatPrice(total);
+};
+
+const renderBadge = () => {
+  const totalCount = Array.from(cart.values()).reduce((a, b) => a + b, 0);
+  if (totalCount > 0) {
+    cartBadge.hidden = false;
+    cartBadge.textContent = totalCount;
+    cartFab.classList.add("cart-fab--bump");
+    cartFab.addEventListener(
+      "animationend",
+      () => cartFab.classList.remove("cart-fab--bump"),
+      { once: true }
+    );
+  } else {
+    cartBadge.hidden = true;
+  }
+};
+
+const renderCartViews = () => {
+  renderCartMain();
+  renderCartPage();
+  renderCheckoutPage();
+  const total = Array.from(cart.entries()).reduce((sum, [id, count]) => {
+    const item = menuItems.find((menuItem) => menuItem.id === id);
+    return sum + (item ? item.price * count : 0);
+  }, 0);
+  cartTotalNode.textContent = formatPrice(total);
+  renderBadge();
+};
+
+const openCartPage = () => {
+  cartPage.classList.add("is-open");
+  cartPage.setAttribute("aria-hidden", "false");
+};
+
+const closeCartPage = () => {
+  cartPage.classList.remove("is-open");
+  cartPage.setAttribute("aria-hidden", "true");
+};
+
+const openCheckoutPage = () => {
+  if (cart.size === 0) {
+    alert("Добавьте позиции в корзину перед оформлением.");
+    return;
+  }
+  checkoutPage.classList.add("is-open");
+  checkoutPage.setAttribute("aria-hidden", "false");
+  closeCartPage();
+};
+
+const closeCheckoutPage = () => {
+  checkoutPage.classList.remove("is-open");
+  checkoutPage.setAttribute("aria-hidden", "true");
+};
+
+cartFab.addEventListener("click", openCartPage);
+cartPageBackdrop.addEventListener("click", closeCartPage);
+cartPageClose.addEventListener("click", closeCartPage);
+cartPageCheckout.addEventListener("click", openCheckoutPage);
+checkoutButton.addEventListener("click", openCheckoutPage);
+checkoutPageBackdrop.addEventListener("click", closeCheckoutPage);
+checkoutPageClose.addEventListener("click", closeCheckoutPage);
+checkoutPageSubmit.addEventListener("click", () => {
+  if (cart.size === 0) {
+    alert("Корзина пуста.");
+    return;
+  }
+  alert("Заказ отправлен! Мы свяжемся для подтверждения.");
+  closeCheckoutPage();
+});
 
 checkoutButton.addEventListener("click", () => {
   if (cart.size === 0) {
     alert("Добавьте позиции в корзину перед оформлением.");
     return;
   }
-
-  alert("Спасибо за заказ! Мы свяжемся с вами для подтверждения.");
 });
 
 searchInput.addEventListener("input", (event) => {
@@ -278,4 +399,4 @@ searchInput.addEventListener("input", (event) => {
 
 renderCategories();
 renderMenu();
-renderCart();
+renderCartViews();

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Cat sushi logo">
+  <circle cx="128" cy="128" r="110" fill="#f7b9d4" />
+  <path d="M62 160c-10 34 18 64 66 64s76-30 66-64z" fill="#2f3037" />
+  <path d="M88 88 82 50l32 22M168 88l6-38-32 22" fill="#2f3037" />
+  <circle cx="128" cy="118" r="46" fill="#2f3037" />
+  <rect x="80" y="102" width="96" height="18" rx="8" fill="#fff" />
+  <circle cx="128" cy="111" r="9" fill="#e42828" />
+  <path d="M58 168c-10 30 14 42 26 44" stroke="#2f3037" stroke-width="14" fill="none" stroke-linecap="round" />
+  <ellipse cx="128" cy="186" rx="58" ry="26" fill="#26272d" />
+  <circle cx="110" cy="120" r="14" fill="#9ad18b" />
+  <circle cx="146" cy="120" r="14" fill="#9ad18b" />
+  <circle cx="110" cy="122" r="6" fill="#0f1115" />
+  <circle cx="146" cy="122" r="6" fill="#0f1115" />
+  <ellipse cx="128" cy="142" rx="12" ry="6" fill="#191a20" />
+  <ellipse cx="108" cy="188" rx="12" ry="10" fill="#2f3037" />
+  <ellipse cx="148" cy="188" rx="12" ry="10" fill="#2f3037" />
+  <ellipse cx="136" cy="178" rx="48" ry="18" fill="#f57932" />
+  <path d="M134 172c-12 12 6 20 8 8" stroke="#b8571e" stroke-width="6" fill="none" stroke-linecap="round" />
+  <path d="M80 104c-8-2-16 8-10 14 5 5 18 8 22-2" fill="#fff" />
+  <path d="M176 104c8-2 16 8 10 14-5 5-18 8-22-2" fill="#fff" />
+  <path d="M70 112c-4-10 6-18 14-10m92 0c4-10-6-18-14-10" stroke="#e1e5ea" stroke-width="6" fill="none" stroke-linecap="round" />
+  <path d="M104 186c-6 10 4 16 12 12m36-12c6 10-4 16-12 12" stroke="#1c1d23" stroke-width="6" fill="none" stroke-linecap="round" />
+</svg>
