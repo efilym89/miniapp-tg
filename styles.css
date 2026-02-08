@@ -83,55 +83,6 @@ main {
   color: #5f6470;
 }
 
-.menu-controls {
-  margin-top: 16px;
-  display: grid;
-  gap: 16px;
-}
-
-.search {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: white;
-  border-radius: 14px;
-  padding: 12px 14px;
-  box-shadow: 0 12px 24px rgba(16, 24, 40, 0.08);
-}
-
-.search__icon {
-  font-size: 16px;
-}
-
-.search input {
-  border: none;
-  outline: none;
-  width: 100%;
-  font-size: 14px;
-  background: transparent;
-}
-
-.categories {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.category-chip {
-  padding: 8px 14px;
-  border-radius: 999px;
-  border: 1px solid #e0e3ea;
-  background: white;
-  font-size: 13px;
-  transition: 0.2s ease;
-}
-
-.category-chip.is-active {
-  background: #111827;
-  color: white;
-  border-color: #111827;
-}
-
 .menu-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -264,26 +215,6 @@ button.primary {
 @media (max-width: 700px) {
   .hero h1 {
     font-size: 32px;
-  }
-
-  .app {
-    padding: 20px 16px 60px;
-  }
-
-  .menu-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .menu-card__image {
-    min-height: 120px;
-  }
-
-  .menu-card__content {
-    gap: 8px;
-  }
-
-  .category-chip {
-    font-size: 12px;
   }
 
   .cart-summary {

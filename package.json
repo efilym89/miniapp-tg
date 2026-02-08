@@ -4,7 +4,7 @@
   "private": true,
   "description": "Static Telegram mini app preview for KGSushi delivery",
   "scripts": {
-    "dev": "python -m http.server 5173 --bind 0.0.0.0",
-    "start": "python -m http.server 5173 --bind 0.0.0.0"
+    "dev": "python -m http.server 5173",
+    "start": "python -m http.server 5173"
   }
 }
