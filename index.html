@@ -11,13 +11,34 @@
       <header class="hero">
         <div>
           <p class="tag">Мини‑приложение в Telegram</p>
-          <h1>KGSushi Delivery</h1>
+          <h1>Токи Delivery</h1>
           <p class="subtitle">
             Свежие роллы, суши и воки. Закажите любимое блюдо прямо в чате.
           </p>
         </div>
         <div class="hero-card">
-          <div class="hero-card__icon">🍣</div>
+          <div class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="128" cy="128" r="108" fill="#f7b9d4" />
+              <ellipse cx="128" cy="170" rx="68" ry="50" fill="#2f3037" />
+              <circle cx="128" cy="114" r="42" fill="#2f3037" />
+              <polygon points="94,86 88,58 112,76" fill="#2f3037" />
+              <polygon points="162,86 168,58 144,76" fill="#2f3037" />
+              <rect x="82" y="96" width="92" height="18" rx="6" fill="#ffffff" />
+              <circle cx="128" cy="105" r="8" fill="#e42828" />
+              <path d="M64 172 q-8 28 18 36" stroke="#2f3037" stroke-width="14" fill="none" stroke-linecap="round" />
+              <ellipse cx="128" cy="190" rx="54" ry="26" fill="#26272d" />
+              <circle cx="106" cy="116" r="12" fill="#94c88f" />
+              <circle cx="150" cy="116" r="12" fill="#94c88f" />
+              <circle cx="106" cy="118" r="6" fill="#0f1115" />
+              <circle cx="150" cy="118" r="6" fill="#0f1115" />
+              <ellipse cx="128" cy="134" rx="12" ry="6" fill="#191a20" />
+              <ellipse cx="110" cy="186" rx="12" ry="10" fill="#2f3037" />
+              <ellipse cx="146" cy="186" rx="12" ry="10" fill="#2f3037" />
+              <ellipse cx="136" cy="176" rx="46" ry="18" fill="#f57932" />
+              <path d="M132 170 q-10 12 6 18" stroke="#b8571e" stroke-width="6" fill="none" stroke-linecap="round" />
+            </svg>
+          </div>
           <div>
             <h2>Быстрая доставка</h2>
             <p>Среднее время доставки — 40 минут по городу.</p>
@@ -54,6 +75,13 @@
           <div class="cart" id="cart">
             <div class="cart__empty">Корзина пока пуста.</div>
           </div>
+          <div class="promo">
+            <label for="promo-code" class="promo__label">Промокод</label>
+            <div class="promo__field">
+              <input id="promo-code" type="text" placeholder="Введите промокод" />
+              <button type="button" class="promo__apply">Применить</button>
+            </div>
+          </div>
           <div class="cart-summary">
             <div>
               <span>Итого:</span>
@@ -68,6 +96,7 @@
     <template id="menu-item-template">
       <article class="menu-card" data-item-id="">
         <div class="menu-card__image">
+          <img class="menu-card__photo" src="" alt="" loading="lazy" hidden />
           <span class="emoji"></span>
         </div>
         <div class="menu-card__content">
@@ -75,7 +104,14 @@
           <p class="description"></p>
           <div class="meta">
             <span class="price"></span>
-            <button class="add">Добавить</button>
+            <div class="card-actions">
+              <button class="add">Добавить</button>
+              <div class="quantity-control" hidden>
+                <button class="quantity-btn decrease">−</button>
+                <span class="quantity-count">0</span>
+                <button class="quantity-btn increase">+</button>
+              </div>
+            </div>
           </div>
         </div>
       </article>

@@ -7,6 +7,7 @@ const menuItems = [
     ingredients: ["рис", "лосось", "огурец", "нори", "сыр"],
     price: 980,
     emoji: "🍣",
+    image: "images/set-classic.jpg",
   },
   {
     id: "roll-philadelphia",
@@ -16,6 +17,7 @@ const menuItems = [
     ingredients: ["лосось", "сливочный сыр", "огурец", "рис", "нори"],
     price: 420,
     emoji: "🐟",
+    image: "images/roll-philadelphia.jpg",
   },
   {
     id: "roll-spicy",
@@ -25,6 +27,7 @@ const menuItems = [
     ingredients: ["тунец", "соус спайси", "рис", "нори"],
     price: 360,
     emoji: "🌶️",
+    image: "images/roll-spicy.jpg",
   },
   {
     id: "wok-chicken",
@@ -34,6 +37,7 @@ const menuItems = [
     ingredients: ["лапша удон", "курица", "овощи", "кунжут", "соус терияки"],
     price: 390,
     emoji: "🍜",
+    image: "images/wok-chicken.jpg",
   },
   {
     id: "sushi-salmon",
@@ -43,6 +47,7 @@ const menuItems = [
     ingredients: ["лосось", "рис"],
     price: 180,
     emoji: "🍙",
+    image: "images/sushi-salmon.jpg",
   },
   {
     id: "dessert-mochi",
@@ -52,6 +57,7 @@ const menuItems = [
     ingredients: ["рисовое тесто", "крем", "манго"],
     price: 220,
     emoji: "🥭",
+    image: "images/dessert-mochi.jpg",
   },
 ];
 
@@ -70,6 +76,21 @@ const menuTemplate = document.getElementById("menu-item-template");
 const cartTemplate = document.getElementById("cart-item-template");
 
 const formatPrice = (value) => `${value} ₽`;
+
+const pulseCard = (id) => {
+  const card = document.querySelector(`[data-item-id="${id}"]`);
+  if (!card) return;
+  card.classList.remove("is-added");
+  void card.offsetWidth;
+  card.classList.add("is-added");
+  card.addEventListener(
+    "animationend",
+    () => {
+      card.classList.remove("is-added");
+    },
+    { once: true }
+  );
+};
 
 const getCategories = () => {
   const categories = new Set(menuItems.map((item) => item.category));
@@ -107,6 +128,34 @@ const filteredMenuItems = () =>
     return categoryMatch && matchesSearch(item);
   });
 
+const updateMenuCardState = (card, id) => {
+  const count = cart.get(id) ?? 0;
+  const addButton = card.querySelector(".add");
+  const control = card.querySelector(".quantity-control");
+  const countNode = card.querySelector(".quantity-count");
+
+  if (!addButton || !control || !countNode) {
+    return;
+  }
+
+  if (count > 0) {
+    addButton.hidden = true;
+    control.hidden = false;
+    countNode.textContent = count;
+  } else {
+    addButton.hidden = false;
+    control.hidden = true;
+    countNode.textContent = "0";
+  }
+};
+
+const updateMenuCardById = (id) => {
+  const card = document.querySelector(`[data-item-id="${id}"]`);
+  if (card) {
+    updateMenuCardState(card, id);
+  }
+};
+
 const renderMenu = () => {
   menuNode.innerHTML = "";
 
@@ -124,13 +173,31 @@ const renderMenu = () => {
     const card = menuTemplate.content.cloneNode(true);
     const article = card.querySelector(".menu-card");
     article.dataset.itemId = item.id;
-    card.querySelector(".emoji").textContent = item.emoji;
+    const emojiNode = card.querySelector(".emoji");
+    const imgNode = card.querySelector(".menu-card__photo");
+    emojiNode.textContent = item.emoji;
+    if (item.image) {
+      imgNode.src = item.image;
+      imgNode.alt = item.name;
+      imgNode.hidden = false;
+      emojiNode.hidden = true;
+    } else {
+      imgNode.hidden = true;
+      emojiNode.hidden = false;
+    }
     card.querySelector("h3").textContent = item.name;
     card.querySelector(".description").textContent = item.description;
     card.querySelector(".price").textContent = formatPrice(item.price);
 
     const addButton = card.querySelector(".add");
     addButton.addEventListener("click", () => addToCart(item.id));
+
+    const decreaseButton = card.querySelector(".quantity-control .decrease");
+    const increaseButton = card.querySelector(".quantity-control .increase");
+    decreaseButton.addEventListener("click", () => updateCount(item.id, -1));
+    increaseButton.addEventListener("click", () => updateCount(item.id, 1));
+
+    updateMenuCardState(article, item.id);
 
     menuNode.appendChild(card);
   });
@@ -140,13 +207,8 @@ const addToCart = (id) => {
   const currentCount = cart.get(id) ?? 0;
   cart.set(id, currentCount + 1);
   renderCart();
-
-  const card = document.querySelector(`[data-item-id="${id}"]`);
-  if (card) {
-    card.classList.remove("is-added");
-    void card.offsetWidth;
-    card.classList.add("is-added");
-  }
+  updateMenuCardById(id);
+  pulseCard(id);
 };
 
 const updateCount = (id, delta) => {
@@ -160,6 +222,10 @@ const updateCount = (id, delta) => {
   }
 
   renderCart();
+  updateMenuCardById(id);
+  if (delta !== 0) {
+    pulseCard(id);
+  }
 };
 
 const renderCart = () => {
@@ -179,9 +245,8 @@ const renderCart = () => {
 
       const row = cartTemplate.content.cloneNode(true);
       row.querySelector(".name").textContent = item.name;
-      row.querySelector(".details").textContent = `${formatPrice(item.price)} за порцию`;
+      row.querySelector(".details").textContent = `${formatPrice(item.price)} · ${count} шт`;
       row.querySelector(".count").textContent = count;
-
       row.querySelector(".decrease").addEventListener("click", () => updateCount(id, -1));
       row.querySelector(".increase").addEventListener("click", () => updateCount(id, 1));
 
