@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>KGSushi Mini App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="hero">
+        <div>
+          <p class="tag">Мини‑приложение в Telegram</p>
+          <h1>KGSushi Delivery</h1>
+          <p class="subtitle">
+            Свежие роллы, суши и воки. Закажите любимое блюдо прямо в чате.
+          </p>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card__icon">🍣</div>
+          <div>
+            <h2>Быстрая доставка</h2>
+            <p>Среднее время доставки — 40 минут по городу.</p>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="menu-section">
+          <div class="section-title">
+            <h2>Меню</h2>
+            <p>Выберите позиции и добавьте их в корзину.</p>
+          </div>
+          <div id="menu" class="menu-grid"></div>
+        </section>
+
+        <section class="cart-section">
+          <div class="section-title">
+            <h2>Корзина</h2>
+            <p>Проверьте ваш заказ перед оформлением.</p>
+          </div>
+          <div class="cart" id="cart">
+            <div class="cart__empty">Корзина пока пуста.</div>
+          </div>
+          <div class="cart-summary">
+            <div>
+              <span>Итого:</span>
+              <strong id="cart-total">0 c</strong>
+            </div>
+            <button id="checkout" class="primary">Оформить заказ</button>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <template id="menu-item-template">
+      <article class="menu-card">
+        <div class="menu-card__image">
+          <span class="emoji"></span>
+        </div>
+        <div class="menu-card__content">
+          <h3></h3>
+          <p class="description"></p>
+          <div class="meta">
+            <span class="price"></span>
+            <button class="add">Добавить</button>
+          </div>
+        </div>
+      </article>
+    </template>
+
+    <template id="cart-item-template">
+      <div class="cart-item">
+        <div>
+          <strong class="name"></strong>
+          <div class="details"></div>
+        </div>
+        <div class="cart-item__actions">
+          <button class="decrease">−</button>
+          <span class="count"></span>
+          <button class="increase">+</button>
+        </div>
+      </div>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>
