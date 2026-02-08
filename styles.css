@@ -239,9 +239,9 @@ main {
 .meta {
   display: flex;
   align-items: center;
-  gap: 12px;
-  justify-content: space-between;
-  flex-wrap: nowrap;
+  gap: 10px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   margin-top: auto;
 }
 
@@ -283,6 +283,7 @@ main {
 
 .price {
   white-space: nowrap;
+  margin-right: auto;
 }
 
 .price {
@@ -704,6 +705,28 @@ button.primary {
 
   .menu-card__content {
     gap: 8px;
+  }
+
+  .meta {
+    gap: 8px;
+  }
+
+  .price {
+    font-size: 15px;
+  }
+
+  .card-actions {
+    gap: 6px;
+    width: 100%;
+  }
+
+  .quantity-control {
+    padding: 4px 8px;
+  }
+
+  .quantity-btn {
+    width: 28px;
+    height: 28px;
   }
 
   .category-chip {

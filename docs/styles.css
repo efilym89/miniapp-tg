@@ -706,6 +706,28 @@ button.primary {
     gap: 8px;
   }
 
+  .meta {
+    gap: 8px;
+  }
+
+  .price {
+    font-size: 15px;
+  }
+
+  .card-actions {
+    gap: 6px;
+    width: 100%;
+  }
+
+  .quantity-control {
+    padding: 4px 8px;
+  }
+
+  .quantity-btn {
+    width: 28px;
+    height: 28px;
+  }
+
   .category-chip {
     font-size: 12px;
   }
