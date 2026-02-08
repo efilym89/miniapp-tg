@@ -83,61 +83,6 @@ main {
   color: #5f6470;
 }
 
-.menu-controls {
-  margin-top: 16px;
-  display: grid;
-  gap: 16px;
-}
-
-.search {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: white;
-  border-radius: 14px;
-  padding: 12px 14px;
-  box-shadow: 0 12px 24px rgba(16, 24, 40, 0.08);
-  border: 1px solid transparent;
-}
-
-.search__icon {
-  font-size: 16px;
-}
-
-.search input {
-  border: none;
-  outline: none;
-  width: 100%;
-  font-size: 14px;
-  background: transparent;
-}
-
-.search:focus-within {
-  border-color: #ff7043;
-  box-shadow: 0 0 0 4px rgba(255, 112, 67, 0.15);
-}
-
-.categories {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.category-chip {
-  padding: 8px 14px;
-  border-radius: 999px;
-  border: 1px solid #e0e3ea;
-  background: white;
-  font-size: 13px;
-  transition: 0.2s ease;
-}
-
-.category-chip.is-active {
-  background: #111827;
-  color: white;
-  border-color: #111827;
-}
-
 .menu-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -152,27 +97,6 @@ main {
   flex-direction: column;
   min-height: 100%;
   box-shadow: 0 16px 32px rgba(16, 24, 40, 0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  position: relative;
-}
-
-.menu-card.is-added {
-  animation: addPulse 0.4s ease;
-}
-
-@keyframes addPulse {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 16px 32px rgba(16, 24, 40, 0.08);
-  }
-  50% {
-    transform: scale(1.02);
-    box-shadow: 0 22px 40px rgba(255, 112, 67, 0.28);
-  }
-  100% {
-    transform: scale(1);
-    box-shadow: 0 16px 32px rgba(16, 24, 40, 0.08);
-  }
 }
 
 .menu-card__image {
@@ -291,26 +215,6 @@ button.primary {
 @media (max-width: 700px) {
   .hero h1 {
     font-size: 32px;
-  }
-
-  .app {
-    padding: 20px 16px 60px;
-  }
-
-  .menu-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .menu-card__image {
-    min-height: 120px;
-  }
-
-  .menu-card__content {
-    gap: 8px;
-  }
-
-  .category-chip {
-    font-size: 12px;
   }
 
   .cart-summary {

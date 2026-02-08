@@ -12,7 +12,7 @@ const menuItems = [
     id: "roll-philadelphia",
     name: "Филадельфия люкс",
     description: "Ролл с лососем, сливочным сыром и огурцом.",
-    category: "Классические роллы",
+    category: "Роллы",
     ingredients: ["лосось", "сливочный сыр", "огурец", "рис", "нори"],
     price: 420,
     emoji: "🐟",
@@ -21,7 +21,7 @@ const menuItems = [
     id: "roll-spicy",
     name: "Спайси тунец",
     description: "Острый ролл с тунцом и соусом спайси.",
-    category: "Жаренные роллы",
+    category: "Роллы",
     ingredients: ["тунец", "соус спайси", "рис", "нори"],
     price: 360,
     emoji: "🌶️",
@@ -69,7 +69,7 @@ const categoryList = document.getElementById("category-list");
 const menuTemplate = document.getElementById("menu-item-template");
 const cartTemplate = document.getElementById("cart-item-template");
 
-const formatPrice = (value) => `${value} ₽`;
+const formatPrice = (value) => `${value} c`;
 
 const getCategories = () => {
   const categories = new Set(menuItems.map((item) => item.category));
@@ -122,8 +122,6 @@ const renderMenu = () => {
 
   items.forEach((item) => {
     const card = menuTemplate.content.cloneNode(true);
-    const article = card.querySelector(".menu-card");
-    article.dataset.itemId = item.id;
     card.querySelector(".emoji").textContent = item.emoji;
     card.querySelector("h3").textContent = item.name;
     card.querySelector(".description").textContent = item.description;
@@ -140,13 +138,6 @@ const addToCart = (id) => {
   const currentCount = cart.get(id) ?? 0;
   cart.set(id, currentCount + 1);
   renderCart();
-
-  const card = document.querySelector(`[data-item-id="${id}"]`);
-  if (card) {
-    card.classList.remove("is-added");
-    void card.offsetWidth;
-    card.classList.add("is-added");
-  }
 };
 
 const updateCount = (id, delta) => {

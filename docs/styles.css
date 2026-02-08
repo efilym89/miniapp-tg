@@ -97,7 +97,6 @@ main {
   border-radius: 14px;
   padding: 12px 14px;
   box-shadow: 0 12px 24px rgba(16, 24, 40, 0.08);
-  border: 1px solid transparent;
 }
 
 .search__icon {
@@ -110,11 +109,6 @@ main {
   width: 100%;
   font-size: 14px;
   background: transparent;
-}
-
-.search:focus-within {
-  border-color: #ff7043;
-  box-shadow: 0 0 0 4px rgba(255, 112, 67, 0.15);
 }
 
 .categories {
@@ -152,27 +146,6 @@ main {
   flex-direction: column;
   min-height: 100%;
   box-shadow: 0 16px 32px rgba(16, 24, 40, 0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  position: relative;
-}
-
-.menu-card.is-added {
-  animation: addPulse 0.4s ease;
-}
-
-@keyframes addPulse {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 16px 32px rgba(16, 24, 40, 0.08);
-  }
-  50% {
-    transform: scale(1.02);
-    box-shadow: 0 22px 40px rgba(255, 112, 67, 0.28);
-  }
-  100% {
-    transform: scale(1);
-    box-shadow: 0 16px 32px rgba(16, 24, 40, 0.08);
-  }
 }
 
 .menu-card__image {
