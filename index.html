@@ -31,6 +31,18 @@
             <h2>Меню</h2>
             <p>Выберите позиции и добавьте их в корзину.</p>
           </div>
+          <div class="menu-controls">
+            <label class="search">
+              <span class="search__icon">🔎</span>
+              <input
+                id="search"
+                type="search"
+                placeholder="Поиск по названию или составу"
+                autocomplete="off"
+              />
+            </label>
+            <div id="category-list" class="categories" aria-label="Категории меню"></div>
+          </div>
           <div id="menu" class="menu-grid"></div>
         </section>
 
@@ -45,7 +57,7 @@
           <div class="cart-summary">
             <div>
               <span>Итого:</span>
-              <strong id="cart-total">0 c</strong>
+              <strong id="cart-total">0 ₽</strong>
             </div>
             <button id="checkout" class="primary">Оформить заказ</button>
           </div>
@@ -54,7 +66,7 @@
     </div>
 
     <template id="menu-item-template">
-      <article class="menu-card">
+      <article class="menu-card" data-item-id="">
         <div class="menu-card__image">
           <span class="emoji"></span>
         </div>
