@@ -805,7 +805,7 @@ button.primary {
 .menu-rail {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 250px;
+  grid-auto-columns: calc((100% - 2 * 16px) / 3);
   gap: 16px;
   overflow-x: auto;
   overscroll-behavior-x: contain;
@@ -997,7 +997,7 @@ button.primary {
 
 @media (max-width: 700px) {
   .menu-rail {
-    grid-auto-columns: 230px;
+    grid-auto-columns: calc((100% - 2 * 12px) / 2.2);
   }
 
   .menu-category__title {
