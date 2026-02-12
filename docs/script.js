@@ -2719,9 +2719,12 @@
     }
 ];
 
+const nutritionByProductId = {"8869":{"calories":null,"proteins":null,"fats":null,"carbohydrates":null,"weight":"32 шт. ± 460 г."},"8957":{"calories":773.5,"proteins":31.5,"fats":31.5,"carbohydrates":45.5,"weight":"8 шт. ± 350 г."},"9408":{"calories":0,"proteins":0,"fats":0,"carbohydrates":0,"weight":"1 порция"},"8870":{"calories":null,"proteins":null,"fats":null,"carbohydrates":null,"weight":"24 шт. ± 880 г."},"9488":{"calories":724.5,"proteins":31.5,"fats":28,"carbohydrates":35,"weight":"8 шт. ± 350 г."},"8817":{"calories":432.4,"proteins":18.4,"fats":11.5,"carbohydrates":29.9,"weight":"8 шт. ± 230 г."},"8888":{"calories":584.2,"proteins":23,"fats":18.4,"carbohydrates":29.9,"weight":"8 шт. ± 230 г."},"8783":{"calories":741,"proteins":18,"fats":24,"carbohydrates":75,"weight":"8 шт. ± 280 г."},"9413":{"calories":1033.2,"proteins":30.8,"fats":67.2,"carbohydrates":36.4,"weight":"8 шт. ± 280 г."},"9056":{"calories":517.5,"proteins":20.7,"fats":23,"carbohydrates":27.6,"weight":"8 шт. ± 240 г."},"9347":{"calories":483.3,"proteins":27,"fats":18.9,"carbohydrates":35.1,"weight":"8 шт. ± 270 г."},"8855":{"calories":null,"proteins":null,"fats":null,"carbohydrates":null,"weight":"20 шт. ± 570 г."},"8929":{"calories":748.2,"proteins":31.9,"fats":37.7,"carbohydrates":34.8,"weight":"8 шт. ± 280 г."},"9473":{"calories":null,"proteins":null,"fats":null,"carbohydrates":null,"weight":"1 шт. ± 50 г."},"9086":{"calories":null,"proteins":null,"fats":null,"carbohydrates":null,"weight":"8 шт. ± 250 г."},"9352":{"calories":921.2,"proteins":16.8,"fats":64.4,"carbohydrates":null,"weight":"8 шт. ± 280 г."},"8908":{"calories":267.3,"proteins":5.5,"fats":5.5,"carbohydrates":22,"weight":"8 шт. ± 110 г."},"9410":{"calories":915.6,"proteins":19.6,"fats":30.8,"carbohydrates":70,"weight":"8 шт. ± 280 г."},"8799":{"calories":728,"proteins":16.8,"fats":39.2,"carbohydrates":36.4,"weight":"8 шт. ± 280 г."},"9288":{"calories":113.5,"proteins":1.2,"fats":2,"carbohydrates":23.3,"weight":"1 шт. ± 50 г."},"8826":{"calories":466.9,"proteins":18.4,"fats":16.1,"carbohydrates":25.3,"weight":"8 шт. ± 240 г."},"9048":{"calories":631.8,"proteins":23.4,"fats":28.6,"carbohydrates":36.4,"weight":"8 шт. ± 270 г."},"8872":{"calories":null,"proteins":null,"fats":null,"carbohydrates":null,"weight":"48 шт. ± 1470 г."},"8829":{"calories":530.4,"proteins":19.2,"fats":19.2,"carbohydrates":36,"weight":"8 шт. ± 240 г."},"8863":{"calories":4.5,"proteins":0,"fats":0,"carbohydrates":0.9,"weight":"20 гр."},"9396":{"calories":null,"proteins":null,"fats":null,"carbohydrates":null,"weight":"1 комплект"},"9416":{"calories":0,"proteins":0,"fats":0,"carbohydrates":0,"weight":"1 порция"},"8802":{"calories":571.3,"proteins":26.1,"fats":20.3,"carbohydrates":34.8,"weight":"8 шт. ± 280 г."},"8831":{"calories":480.6,"proteins":10.8,"fats":23.4,"carbohydrates":25.2,"weight":"8 шт. ± 200 г."},"8859":{"calories":null,"proteins":null,"fats":null,"carbohydrates":null,"weight":"64 шт. ± 1980 г."},"8791":{"calories":774,"proteins":18,"fats":30,"carbohydrates":66,"weight":"8 шт. ± 280 г."},"8931":{"calories":null,"proteins":null,"fats":null,"carbohydrates":null,"weight":"8 шт. ± 140 г."},"9412":{"calories":1069.6,"proteins":33.6,"fats":61.6,"carbohydrates":36.4,"weight":"8 шт. ± 280 г."},"8864":{"calories":37.6,"proteins":1.5,"fats":0.9,"carbohydrates":5.7,"weight":"10 гр."},"8945":{"calories":null,"proteins":null,"fats":null,"carbohydrates":null,"weight":"8 шт. ± 140 г."},"8953":{"calories":149.7,"proteins":1.2,"fats":12.3,"carbohydrates":5.7,"weight":"30 г."},"8835":{"calories":633.6,"proteins":26.4,"fats":26.4,"carbohydrates":33.6,"weight":"8 шт. ± 240 г."},"8816":{"calories":420.9,"proteins":16.1,"fats":9.2,"carbohydrates":29.9,"weight":"8 шт. ± 230 г."},"8833":{"calories":604.8,"proteins":24.3,"fats":27,"carbohydrates":32.4,"weight":"8 шт. ± 270 г."},"9289":{"calories":113.5,"proteins":1.2,"fats":2,"carbohydrates":23,"weight":"1 шт. ± 50 г."},"9055":{"calories":831.6,"proteins":30.8,"fats":44.8,"carbohydrates":39.2,"weight":"8 шт ± 280 г."},"9034":{"calories":464.4,"proteins":12.6,"fats":16.2,"carbohydrates":28.8,"weight":"8 шт. ± 180 г."},"8797":{"calories":686.4,"proteins":12,"fats":40.8,"carbohydrates":28.8,"weight":"8 шт. ± 270 г."},"8883":{"calories":735,"proteins":21,"fats":30,"carbohydrates":66,"weight":"8 шт. ± 280 г."},"8851":{"calories":null,"proteins":null,"fats":null,"carbohydrates":null,"weight":"24 шт. ± 810 г."},"9424":{"calories":0,"proteins":0,"fats":0,"carbohydrates":0,"weight":"1 порция"},"8853":{"calories":null,"proteins":null,"fats":null,"carbohydrates":null,"weight":"24 шт. ± 850 г."},"9487":{"calories":506,"proteins":14,"fats":22,"carbohydrates":28,"weight":"8 шт. ± 200 г."},"9421":{"calories":0,"proteins":0,"fats":0,"carbohydrates":0,"weight":"1 порция"},"8830":{"calories":591.3,"proteins":18.9,"fats":24.3,"carbohydrates":37.8,"weight":"8 шт. ± 270 г."},"8881":{"calories":705,"proteins":21,"fats":18,"carbohydrates":75,"weight":"8 шт. ± 280 г."},"8874":{"calories":684,"proteins":14.4,"fats":40.8,"carbohydrates":28.8,"weight":"8 шт. ± 270 г."},"8958":{"calories":500.4,"proteins":16.2,"fats":23.4,"carbohydrates":25.2,"weight":"8 шт. ± 180 г."},"8875":{"calories":null,"proteins":null,"fats":null,"carbohydrates":null,"weight":"24 шт. ± 640 г."},"9085":{"calories":null,"proteins":null,"fats":null,"carbohydrates":null,"weight":"8 шт. ± 250 г."},"8801":{"calories":803.6,"proteins":22.4,"fats":47.6,"carbohydrates":33.6,"weight":"8 шт. ± 280 г."},"9291":{"calories":92.5,"proteins":1.2,"fats":3.8,"carbohydrates":14,"weight":"1 шт. ± 50 г."},"8901":{"calories":804,"proteins":21,"fats":48,"carbohydrates":72,"weight":"± 300 г."},"8858":{"calories":null,"proteins":null,"fats":null,"carbohydrates":null,"weight":"40 шт. ± 910 г."},"8792":{"calories":704,"proteins":22.4,"fats":16,"carbohydrates":80,"weight":"8 шт. ± 300 г."},"8844":{"calories":600,"proteins":12.5,"fats":25,"carbohydrates":35,"weight":"8 шт. ± 240 г."},"9479":{"calories":516,"proteins":16.8,"fats":19.2,"carbohydrates":28.8,"weight":"8 шт. ± 240 г."},"9041":{"calories":701.4,"proteins":16.8,"fats":42,"carbohydrates":31.5,"weight":"8 шт. ± 210 г."},"9422":{"calories":0,"proteins":0,"fats":0,"carbohydrates":0,"weight":"1 порция"},"9426":{"calories":0,"proteins":0,"fats":0,"carbohydrates":0,"weight":"1 порция"},"9442":{"calories":0,"proteins":0,"fats":0,"carbohydrates":0,"weight":"1 порция."},"8832":{"calories":540,"proteins":24.3,"fats":18.9,"carbohydrates":32.4,"weight":"8 шт. ± 280 г."},"8785":{"calories":235.4,"proteins":9.9,"fats":1.1,"carbohydrates":18.7,"weight":"8 шт. ± 110 г."},"8926":{"calories":778.4,"proteins":19.6,"fats":28,"carbohydrates":72.8,"weight":"± 280 г."},"9411":{"calories":873.6,"proteins":16.8,"fats":53.2,"carbohydrates":null,"weight":"8 шт. ± 280 г."},"9477":{"calories":468,"proteins":14.4,"fats":12,"carbohydrates":36,"weight":"8 шт. ± 240 г."},"8903":{"calories":null,"proteins":null,"fats":null,"carbohydrates":null,"weight":"1 шт."},"9418":{"calories":0,"proteins":0,"fats":0,"carbohydrates":0,"weight":"1 порция"},"9089":{"calories":1041,"proteins":24,"fats":69,"carbohydrates":42,"weight":"8 шт. ± 280 г."},"9350":{"calories":595.2,"proteins":14.4,"fats":28.8,"carbohydrates":33.6,"weight":"8 шт. ± 240 г."},"9092":{"calories":932.4,"proteins":25.2,"fats":61.6,"carbohydrates":39.2,"weight":"8 шт. ± 280 г."},"8884":{"calories":684,"proteins":21,"fats":18,"carbohydrates":75,"weight":"8 шт. ± 280 г."},"8878":{"calories":805,"proteins":27.5,"fats":42.5,"carbohydrates":37.5,"weight":"8 шт. ± 250 г."},"8787":{"calories":205.7,"proteins":3.3,"fats":1.1,"carbohydrates":19.8,"weight":"8 шт. ± 110 г."},"8842":{"calories":642.5,"proteins":15,"fats":30,"carbohydrates":37.5,"weight":"8 шт. ± 240 г."},"8846":{"calories":548.6,"proteins":20.8,"fats":15.6,"carbohydrates":41.6,"weight":"8 шт. ± 230 г."},"9419":{"calories":0,"proteins":0,"fats":0,"carbohydrates":0,"weight":"1 порция"},"9427":{"calories":0,"proteins":0,"fats":0,"carbohydrates":0,"weight":"1 порция"},"9292":{"calories":122.5,"proteins":2.2,"fats":5,"carbohydrates":21.7,"weight":"1 шт. ± 50 г."},"8906":{"calories":null,"proteins":null,"fats":null,"carbohydrates":null,"weight":"1 порция."},"9476":{"calories":null,"proteins":null,"fats":null,"carbohydrates":null,"weight":"1 шт. ± 50 г."},"9475":{"calories":null,"proteins":null,"fats":null,"carbohydrates":null,"weight":"1 шт. ± 50 г."},"8927":{"calories":856.8,"proteins":28,"fats":53.2,"carbohydrates":33.6,"weight":"8 шт. ± 270 г."},"8818":{"calories":666.9,"proteins":16.2,"fats":43.2,"carbohydrates":37.8,"weight":"8 шт. ± 280 г."},"8828":{"calories":591.3,"proteins":18.9,"fats":24.3,"carbohydrates":37.8,"weight":"8 шт. ± 270 г."},"8798":{"calories":796.5,"proteins":21.6,"fats":45.9,"carbohydrates":37.8,"weight":"8 шт. ± 280 г."},"9061":{"calories":null,"proteins":null,"fats":null,"carbohydrates":null,"weight":"± 260 г."},"9474":{"calories":null,"proteins":null,"fats":null,"carbohydrates":null,"weight":"1 шт. ± 50 г."},"9014":{"calories":697.5,"proteins":12.5,"fats":45,"carbohydrates":30,"weight":"8 шт. ± 250 г."},"9082":{"calories":841.5,"proteins":19.8,"fats":29.7,"carbohydrates":72.6,"weight":"8 шт. ± 330 г."},"8904":{"calories":null,"proteins":null,"fats":null,"carbohydrates":null,"weight":"1 пара."},"8822":{"calories":565.6,"proteins":25.2,"fats":19.6,"carbohydrates":33.6,"weight":"8 шт. ± 280 г."},"8910":{"calories":575,"proteins":22.5,"fats":25,"carbohydrates":27.5,"weight":"8 шт. ± 250 г."},"8795":{"calories":844.8,"proteins":23.1,"fats":33,"carbohydrates":75.9,"weight":"8 шт. ± 320 г."},"8838":{"calories":562.8,"proteins":18.9,"fats":21,"carbohydrates":29.4,"weight":"8 шт. ± 210 г."},"8857":{"calories":null,"proteins":null,"fats":null,"carbohydrates":null,"weight":"20 шт. ± 540 г."},"9080":{"calories":null,"proteins":null,"fats":null,"carbohydrates":null,"weight":"80 шт. ± 2360 г."},"8930":{"calories":47.1,"proteins":0.9,"fats":0,"carbohydrates":10.8,"weight":"30 гр."},"8946":{"calories":null,"proteins":null,"fats":null,"carbohydrates":null,"weight":"8 шт. ± 140 г."},"8852":{"calories":null,"proteins":null,"fats":null,"carbohydrates":null,"weight":"24 шт. ± 700 г."},"9091":{"calories":1008,"proteins":19.6,"fats":70,"carbohydrates":39.2,"weight":"8 шт. ± 280 г."},"8868":{"calories":null,"proteins":null,"fats":null,"carbohydrates":null,"weight":"1 пара."},"8885":{"calories":595.4,"proteins":20.8,"fats":26,"carbohydrates":31.2,"weight":"8 шт. ± 240 г."},"8786":{"calories":304.8,"proteins":8.4,"fats":7.2,"carbohydrates":24,"weight":"8 шт. ± 120 г."},"9294":{"calories":null,"proteins":null,"fats":null,"carbohydrates":null,"weight":"1 шт. ± 50 г."},"8821":{"calories":null,"proteins":null,"fats":null,"carbohydrates":null,"weight":"8 шт. ± 280 г."},"8923":{"calories":681,"proteins":15,"fats":15,"carbohydrates":81,"weight":"8 шт. ± 280 г."},"8824":{"calories":672.8,"proteins":26.1,"fats":31.9,"carbohydrates":29,"weight":"8 шт. ± 290 г."},"8867":{"calories":204.3,"proteins":0.3,"fats":15.6,"carbohydrates":4.5,"weight":"30 гр."},"8843":{"calories":645,"proteins":15,"fats":30,"carbohydrates":35,"weight":"8 шт. ± 240 г."},"8866":{"calories":176.1,"proteins":0.6,"fats":18.6,"carbohydrates":1.2,"weight":"30 гр."},"9072":{"calories":null,"proteins":null,"fats":null,"carbohydrates":null,"weight":"32 шт. ± 1010 г."},"8820":{"calories":537.3,"proteins":24.3,"fats":21.6,"carbohydrates":27,"weight":"8 шт. ± 280 г."},"8862":{"calories":23.2,"proteins":1.6,"fats":0,"carbohydrates":4.4,"weight":"30 гр."},"9293":{"calories":305,"proteins":2,"fats":5,"carbohydrates":45,"weight":"1 шт. ± 50 г."},"8845":{"calories":624,"proteins":20.8,"fats":28.6,"carbohydrates":28.6,"weight":"8 шт. ± 260 г."},"8986":{"calories":606.6,"proteins":12.6,"fats":30.6,"carbohydrates":28.8,"weight":"8 шт. ± 180 г."},"8793":{"calories":693,"proteins":18,"fats":18,"carbohydrates":75,"weight":"8 шт. ± 280 г."},"8879":{"calories":625,"proteins":20,"fats":32.5,"carbohydrates":30,"weight":"8 шт. ± 270 г."},"9314":{"calories":null,"proteins":null,"fats":null,"carbohydrates":null,"weight":"1 шт. ± 50 г."},"9417":{"calories":0,"proteins":0,"fats":0,"carbohydrates":0,"weight":"1 порция"},"8905":{"calories":null,"proteins":null,"fats":null,"carbohydrates":null,"weight":"1 порция."},"9451":{"calories":591.3,"proteins":18.9,"fats":24.3,"carbohydrates":37.8,"weight":"8 шт. ± 270 г."},"9423":{"calories":null,"proteins":null,"fats":null,"carbohydrates":null,"weight":"1 порция"},"8916":{"calories":605.8,"proteins":23.4,"fats":26,"carbohydrates":33.8,"weight":"8 шт. ± 250 г."},"9425":{"calories":0,"proteins":0,"fats":0,"carbohydrates":0,"weight":"1 порция"},"8856":{"calories":null,"proteins":null,"fats":null,"carbohydrates":null,"weight":"40 шт. ± 1140 г."},"9054":{"calories":666.4,"proteins":16.8,"fats":42,"carbohydrates":39.2,"weight":"8 шт ± 280 г."},"8865":{"calories":126,"proteins":0.6,"fats":12,"carbohydrates":4.2,"weight":"30 гр."},"9409":{"calories":663.6,"proteins":30.8,"fats":11.2,"carbohydrates":72.8,"weight":"8 шт. ± 280 г."},"8971":{"calories":666.9,"proteins":29.7,"fats":24.3,"carbohydrates":45.9,"weight":"8 шт. ± 270 г."},"9353":{"calories":1019.2,"proteins":25.2,"fats":67.2,"carbohydrates":null,"weight":"8 шт. ± 280 г."},"8839":{"calories":585.6,"proteins":19.2,"fats":28.8,"carbohydrates":28.8,"weight":"8 шт. ± 240 г."},"9295":{"calories":null,"proteins":null,"fats":null,"carbohydrates":null,"weight":"1 шт. ± 50 г."},"8895":{"calories":583.2,"proteins":29.7,"fats":18.9,"carbohydrates":37.8,"weight":"8 шт. ± 270 г."},"8782":{"calories":761.6,"proteins":16.8,"fats":30.8,"carbohydrates":67.2,"weight":"8 шт. ± 280 г."},"8825":{"calories":645.3,"proteins":18.9,"fats":32.4,"carbohydrates":29.7,"weight":"8 шт. ± 270 г."},"8854":{"calories":null,"proteins":null,"fats":null,"carbohydrates":null,"weight":"56 шт. ± 1470 г."},"9290":{"calories":124.4,"proteins":2.4,"fats":6.6,"carbohydrates":14.4,"weight":"1 шт. ± 50 г."},"8790":{"calories":691.6,"proteins":22.4,"fats":19.6,"carbohydrates":70,"weight":"8 шт. ± 280 г."},"8928":{"calories":748.8,"proteins":26,"fats":44.2,"carbohydrates":28.6,"weight":"8 шт. ± 280 г."},"9415":{"calories":705.6,"proteins":28,"fats":33.6,"carbohydrates":33.6,"weight":"8 шт. ± 280 г."},"9414":{"calories":607.6,"proteins":39.2,"fats":19.6,"carbohydrates":28,"weight":"8 шт. ± 280 г."},"8850":{"calories":null,"proteins":null,"fats":null,"carbohydrates":null,"weight":"24 шт. ± 810 г."},"9420":{"calories":0,"proteins":0,"fats":0,"carbohydrates":0,"weight":"1 порция"},"8800":{"calories":728,"proteins":19.6,"fats":42,"carbohydrates":33.6,"weight":"8 шт. ± 280 г."},"8972":{"calories":596.7,"proteins":24.3,"fats":27,"carbohydrates":32.4,"weight":"8 шт. ± 280 г."},"8880":{"calories":660,"proteins":24,"fats":12,"carbohydrates":75,"weight":"8 шт. ± 280 г."},"8803":{"calories":849.6,"proteins":16.8,"fats":55.2,"carbohydrates":36,"weight":"8 шт. ± 280 г."},"8836":{"calories":410,"proteins":20,"fats":8,"carbohydrates":28,"weight":"8 шт. ± 200 г."},"8827":{"calories":540,"proteins":19.2,"fats":19.2,"carbohydrates":36,"weight":"8 шт. ± 240 г."},"8919":{"calories":null,"proteins":null,"fats":null,"carbohydrates":null,"weight":"8 шт. ± 200 г."},"8788":{"calories":284.4,"proteins":8.4,"fats":7.2,"carbohydrates":19.2,"weight":"8 шт. ± 120 г."}};
+
 const cart = new Map();
 let activeCategory = "Все";
 let searchQuery = "";
+let activeProductId = null;
 
 const menuNode = document.getElementById("menu");
 const cartNode = document.getElementById("cart");
@@ -2748,7 +2751,67 @@ const checkoutPageList = document.getElementById("checkout-page-list");
 const checkoutPageTotal = document.getElementById("checkout-page-total");
 const checkoutPageSubmit = document.getElementById("checkout-page-submit");
 
+const productModal = document.getElementById("product-modal");
+const productModalBackdrop = document.getElementById("product-modal-backdrop");
+const productModalClose = document.getElementById("product-modal-close");
+const productModalImage = document.getElementById("product-modal-image");
+const productModalEmoji = document.getElementById("product-modal-emoji");
+const productModalTitle = document.getElementById("product-modal-title");
+const productModalPrice = document.getElementById("product-modal-price");
+const productModalDescription = document.getElementById("product-modal-description");
+const productModalWeight = document.getElementById("product-modal-weight");
+const productModalKcal = document.getElementById("product-modal-kcal");
+const productModalProtein = document.getElementById("product-modal-protein");
+const productModalFat = document.getElementById("product-modal-fat");
+const productModalCarbs = document.getElementById("product-modal-carbs");
+const productModalAdd = document.getElementById("product-modal-add");
+const productModalQuantity = document.getElementById("product-modal-quantity");
+const productModalDecrease = document.getElementById("product-modal-decrease");
+const productModalIncrease = document.getElementById("product-modal-increase");
+const productModalCount = document.getElementById("product-modal-count");
+
 const formatPrice = (value) => `${value} ₽`;
+
+const getItemById = (id) => menuItems.find((menuItem) => menuItem.id === id);
+const slugifyCategory = (value) =>
+  value
+    .toLowerCase()
+    .replace(/[^a-zа-я0-9]+/gi, "-")
+    .replace(/^-+|-+$/g, "");
+const getCategorySectionId = (category) => `category-${slugifyCategory(category)}`;
+
+const parseSourceProductId = (menuItemId) => {
+  const match = /^toki-(\d+)-/.exec(menuItemId);
+  return match ? match[1] : "";
+};
+
+const formatNutrition = (value) => {
+  if (typeof value !== "number" || Number.isNaN(value)) return "—";
+  const rounded = Math.round(value * 10) / 10;
+  return Number.isInteger(rounded) ? String(rounded) : rounded.toFixed(1);
+};
+
+const getNutrition = (item) => {
+  const sourceId = parseSourceProductId(item.id);
+  const nutrition = sourceId ? nutritionByProductId[sourceId] : null;
+  if (!nutrition) {
+    return {
+      calories: "—",
+      proteins: "—",
+      fats: "—",
+      carbohydrates: "—",
+      weight: "",
+    };
+  }
+
+  return {
+    calories: formatNutrition(nutrition.calories),
+    proteins: formatNutrition(nutrition.proteins),
+    fats: formatNutrition(nutrition.fats),
+    carbohydrates: formatNutrition(nutrition.carbohydrates),
+    weight: nutrition.weight || "",
+  };
+};
 
 const pulseCard = (id) => {
   const card = document.querySelector(`[data-item-id="${id}"]`);
@@ -2779,8 +2842,15 @@ const renderCategories = () => {
     button.textContent = category;
     button.addEventListener("click", () => {
       activeCategory = category;
-      renderMenu();
       renderCategories();
+      if (category === "Все") {
+        menuNode.scrollIntoView({ behavior: "smooth", block: "start" });
+        return;
+      }
+      const target = document.getElementById(getCategorySectionId(category));
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
     });
     categoryList.appendChild(button);
   });
@@ -2794,31 +2864,109 @@ const matchesSearch = (item) => {
 };
 
 const filteredMenuItems = () =>
-  menuItems.filter((item) => {
-    const categoryMatch = activeCategory === "Все" || item.category === activeCategory;
-    return categoryMatch && matchesSearch(item);
+  menuItems.filter((item) => matchesSearch(item));
+
+const groupMenuItems = (items) => {
+  const groups = new Map();
+  items.forEach((item) => {
+    if (!groups.has(item.category)) {
+      groups.set(item.category, []);
+    }
+    groups.get(item.category).push(item);
   });
 
-const updateMenuCardState = (card, id) => {
-  const count = cart.get(id) ?? 0;
-  const addButton = card.querySelector(".add");
-  const control = card.querySelector(".quantity-control");
-  const countNode = card.querySelector(".quantity-count");
-  if (!addButton || !control || !countNode) return;
-  if (count > 0) {
-    addButton.hidden = true;
-    control.hidden = false;
-    countNode.textContent = count;
+  const ordered = getCategories().filter((category) => category !== "Все");
+  return ordered
+    .map((category) => ({
+      category,
+      items: groups.get(category) || [],
+    }))
+    .filter((group) => group.items.length > 0);
+};
+
+const openProductModal = (id) => {
+  const item = getItemById(id);
+  if (!item || !productModal) return;
+
+  activeProductId = id;
+  const nutrition = getNutrition(item);
+
+  productModalTitle.textContent = item.name;
+  productModalPrice.textContent = formatPrice(item.price);
+  productModalDescription.textContent = item.description;
+  productModalKcal.textContent = nutrition.calories;
+  productModalProtein.textContent = nutrition.proteins;
+  productModalFat.textContent = nutrition.fats;
+  productModalCarbs.textContent = nutrition.carbohydrates;
+  productModalWeight.textContent = nutrition.weight ? `Вес: ${nutrition.weight}` : "";
+
+  if (item.image) {
+    productModalImage.src = item.image;
+    productModalImage.alt = item.name;
+    productModalImage.hidden = false;
+    productModalEmoji.hidden = true;
   } else {
-    addButton.hidden = false;
-    control.hidden = true;
-    countNode.textContent = "0";
+    productModalImage.hidden = true;
+    productModalEmoji.hidden = false;
+    productModalEmoji.textContent = item.emoji || "🍣";
+  }
+
+  updateProductModalState();
+  productModal.classList.add("is-open");
+  productModal.setAttribute("aria-hidden", "false");
+};
+
+const closeProductModal = () => {
+  if (!productModal) return;
+  productModal.classList.remove("is-open");
+  productModal.setAttribute("aria-hidden", "true");
+  activeProductId = null;
+};
+
+const updateProductModalState = () => {
+  if (!activeProductId || !productModalAdd || !productModalQuantity || !productModalCount) return;
+  const count = cart.get(activeProductId) ?? 0;
+  if (count > 0) {
+    productModalAdd.hidden = true;
+    productModalQuantity.hidden = false;
+    productModalCount.textContent = count;
+  } else {
+    productModalAdd.hidden = false;
+    productModalQuantity.hidden = true;
+    productModalCount.textContent = "0";
   }
 };
 
-const updateMenuCardById = (id) => {
-  const card = document.querySelector(`[data-item-id="${id}"]`);
-  if (card) updateMenuCardState(card, id);
+const createMenuCard = (item) => {
+  const card = menuTemplate.content.cloneNode(true);
+  const article = card.querySelector(".menu-card");
+  article.dataset.itemId = item.id;
+
+  const emojiNode = card.querySelector(".emoji");
+  const imgNode = card.querySelector(".menu-card__photo");
+  if (item.image) {
+    imgNode.src = item.image;
+    imgNode.alt = item.name;
+    imgNode.hidden = false;
+    emojiNode.hidden = true;
+  } else {
+    imgNode.hidden = true;
+    emojiNode.hidden = false;
+    emojiNode.textContent = item.emoji;
+  }
+
+  card.querySelector("h3").textContent = item.name;
+  card.querySelector(".price").textContent = formatPrice(item.price);
+
+  article.addEventListener("click", () => openProductModal(item.id));
+  article.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      openProductModal(item.id);
+    }
+  });
+
+  return article;
 };
 
 const renderMenu = () => {
@@ -2831,37 +2979,32 @@ const renderMenu = () => {
     menuNode.appendChild(empty);
     return;
   }
-  items.forEach((item) => {
-    const card = menuTemplate.content.cloneNode(true);
-    const article = card.querySelector(".menu-card");
-    article.dataset.itemId = item.id;
-    const emojiNode = card.querySelector(".emoji");
-    const imgNode = card.querySelector(".menu-card__photo");
-    emojiNode.textContent = item.emoji;
-    if (item.image) {
-      imgNode.src = item.image;
-      imgNode.alt = item.name;
-      imgNode.hidden = false;
-      emojiNode.hidden = true;
-    } else {
-      imgNode.hidden = true;
-      emojiNode.hidden = false;
-    }
-    card.querySelector("h3").textContent = item.name;
-    card.querySelector(".description").textContent = item.description;
-    card.querySelector(".price").textContent = formatPrice(item.price);
 
-    const addButton = card.querySelector(".add");
-    addButton.addEventListener("click", () => addToCart(item.id));
+  const groupedItems = groupMenuItems(items);
 
-    const decreaseButton = card.querySelector(".quantity-control .decrease");
-    const increaseButton = card.querySelector(".quantity-control .increase");
-    decreaseButton.addEventListener("click", () => updateCount(item.id, -1));
-    increaseButton.addEventListener("click", () => updateCount(item.id, 1));
+  groupedItems.forEach((group) => {
+    const section = document.createElement("section");
+    section.className = "menu-category";
+    section.id = getCategorySectionId(group.category);
 
-    updateMenuCardState(article, item.id);
+    const header = document.createElement("header");
+    header.className = "menu-category__header";
 
-    menuNode.appendChild(card);
+    const title = document.createElement("h3");
+    title.className = "menu-category__title";
+    title.textContent = group.category;
+    header.appendChild(title);
+
+    const rail = document.createElement("div");
+    rail.className = "menu-rail";
+
+    group.items.forEach((item) => {
+      rail.appendChild(createMenuCard(item));
+    });
+
+    section.appendChild(header);
+    section.appendChild(rail);
+    menuNode.appendChild(section);
   });
 };
 
@@ -2869,7 +3012,7 @@ const addToCart = (id) => {
   const currentCount = cart.get(id) ?? 0;
   cart.set(id, currentCount + 1);
   renderCartViews();
-  updateMenuCardById(id);
+  updateProductModalState();
   pulseCard(id);
 };
 
@@ -2882,7 +3025,7 @@ const updateCount = (id, delta) => {
     cart.set(id, nextCount);
   }
   renderCartViews();
-  updateMenuCardById(id);
+  updateProductModalState();
   if (delta !== 0) pulseCard(id);
 };
 
@@ -2895,7 +3038,7 @@ const renderCartMain = () => {
     cartNode.appendChild(empty);
   } else {
     Array.from(cart.entries()).forEach(([id, count]) => {
-      const item = menuItems.find((menuItem) => menuItem.id === id);
+      const item = getItemById(id);
       if (!item) return;
       const row = cartTemplate.content.cloneNode(true);
       row.querySelector(".name").textContent = item.name;
@@ -2919,7 +3062,7 @@ const renderCartPage = () => {
     return;
   }
   Array.from(cart.entries()).forEach(([id, count]) => {
-    const item = menuItems.find((menuItem) => menuItem.id === id);
+    const item = getItemById(id);
     if (!item) return;
     const row = cartPageTemplate.content.cloneNode(true);
     row.querySelector(".name").textContent = item.name;
@@ -2935,7 +3078,7 @@ const renderCartPage = () => {
     cartPageList.appendChild(row);
   });
   const total = Array.from(cart.entries()).reduce((sum, [id, count]) => {
-    const item = menuItems.find((menuItem) => menuItem.id === id);
+    const item = getItemById(id);
     return sum + (item ? item.price * count : 0);
   }, 0);
   cartPageTotal.textContent = formatPrice(total);
@@ -2952,7 +3095,7 @@ const renderCheckoutPage = () => {
     return;
   }
   Array.from(cart.entries()).forEach(([id, count]) => {
-    const item = menuItems.find((menuItem) => menuItem.id === id);
+    const item = getItemById(id);
     if (!item) return;
     const row = cartPageTemplate.content.cloneNode(true);
     row.querySelector(".name").textContent = item.name;
@@ -2968,7 +3111,7 @@ const renderCheckoutPage = () => {
     checkoutPageList.appendChild(row);
   });
   const total = Array.from(cart.entries()).reduce((sum, [id, count]) => {
-    const item = menuItems.find((menuItem) => menuItem.id === id);
+    const item = getItemById(id);
     return sum + (item ? item.price * count : 0);
   }, 0);
   checkoutPageTotal.textContent = formatPrice(total);
@@ -2995,11 +3138,12 @@ const renderCartViews = () => {
   renderCartPage();
   renderCheckoutPage();
   const total = Array.from(cart.entries()).reduce((sum, [id, count]) => {
-    const item = menuItems.find((menuItem) => menuItem.id === id);
+    const item = getItemById(id);
     return sum + (item ? item.price * count : 0);
   }, 0);
   cartTotalNode.textContent = formatPrice(total);
   renderBadge();
+  updateProductModalState();
 };
 
 const openCartPage = () => {
@@ -3020,6 +3164,7 @@ const openCheckoutPage = () => {
   checkoutPage.classList.add("is-open");
   checkoutPage.setAttribute("aria-hidden", "false");
   closeCartPage();
+  closeProductModal();
 };
 
 const closeCheckoutPage = () => {
@@ -3043,12 +3188,37 @@ checkoutPageSubmit.addEventListener("click", () => {
   closeCheckoutPage();
 });
 
-checkoutButton.addEventListener("click", () => {
-  if (cart.size === 0) {
-    alert("Добавьте позиции в корзину перед оформлением.");
-    return;
+if (productModalBackdrop) {
+  productModalBackdrop.addEventListener("click", closeProductModal);
+}
+if (productModalClose) {
+  productModalClose.addEventListener("click", closeProductModal);
+}
+if (productModalAdd) {
+  productModalAdd.addEventListener("click", () => {
+    if (!activeProductId) return;
+    addToCart(activeProductId);
+  });
+}
+if (productModalDecrease) {
+  productModalDecrease.addEventListener("click", () => {
+    if (!activeProductId) return;
+    updateCount(activeProductId, -1);
+  });
+}
+if (productModalIncrease) {
+  productModalIncrease.addEventListener("click", () => {
+    if (!activeProductId) return;
+    updateCount(activeProductId, 1);
+  });
+}
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && productModal?.classList.contains("is-open")) {
+    closeProductModal();
   }
 });
+
 
 searchInput.addEventListener("input", (event) => {
   searchQuery = event.target.value.trim();
@@ -3058,6 +3228,4 @@ searchInput.addEventListener("input", (event) => {
 renderCategories();
 renderMenu();
 renderCartViews();
-
-
 
